@@ -29,7 +29,7 @@ Quick start options:
 <!-- LICENSE -->
 ## License
 - Copyright 2021 Wiktor Poniewierski (https://www.facebook.com/wiktor.poniewierski)
-- Licensed under MIT (https://github.com/hanks-bs/fixit-site/blob/hks/LICENSE)
+- No license - ***All Rights Reserved!***
 
 ## Useful Links
 
