@@ -22,9 +22,10 @@ Project is created with:
 Quick start options:
 
 - [Download from Github](https://github.com/hanks-bs/fixit-site.git).
-- Clone the repo: `git clone https://github.com/hanks-bs/fixit-site.git`.
+- Clone the repo: `$ git clone https://github.com/hanks-bs/fixit-site.git`.
 - Unpackage files.
-- Write in terminal/console `npm install`.
+- Go to project folder.
+- Write in terminal/console `$ npm install`.
 
 <!-- LICENSE -->
 ## License
