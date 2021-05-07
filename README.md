@@ -25,7 +25,14 @@ Quick start options:
 - Clone the repo: `$ git clone https://github.com/hanks-bs/fixit-site.git`.
 - Unpackage files.
 - Go to project folder.
-- Write in terminal/console `$ npm install`.
+- Write in terminal/console:
+
+ ```
+ $ npm install
+ $ gulp
+ ```
+ 
+ - Go to the `./dist` to see the compiled project files.
 
 <!-- LICENSE -->
 ## License
