@@ -16,6 +16,7 @@ section:not(.topsection) {
     padding-bottom: 15px;
     background-color: $default-bg-section;
     display: flex;
+    justify-content: center;
 
     &.first-infobar {
         color: #fff;
@@ -76,7 +77,8 @@ section:not(.topsection) {
         }
 
         .imgBx {
-            padding: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
 
     }
