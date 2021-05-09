@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### - Changed:
 - Section elements width
 - Image padding in info section
+
 ## [0.01] - 09-05-2021
 ### - Changed:
 - `gulfile.js`
