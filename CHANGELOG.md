@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+## [0.0.3] - 14-05.2021
+### - Added:
+- Animations
+- Lozad plugin
+
+### - Changed:
+- Cleaned up gulp file
 ## [0.0.2] - 10-05-2021
 ### - Changed:
 - Section elements width

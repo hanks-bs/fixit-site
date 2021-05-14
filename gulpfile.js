@@ -13,9 +13,7 @@ lazyplugins.imagemin = require('gulp-imagemin');
 lazyplugins.cache = require('gulp-cache');
 lazyplugins.notify = require('gulp-notify');
 lazyplugins.clean = require('gulp-clean');
-lazyplugins.purgecss = require('gulp-purgecss')
 lazyplugins.concat = require('gulp-concat');
-var gzip = require('gulp-gzip');
 
     gulp.task( 'styles',  () => {
         return gulp
@@ -41,15 +39,16 @@ var gzip = require('gulp-gzip');
         return gulp.src(['./src/assets/scripts/*.ts', './src/assets/scripts/*.js'])
         //.pipe(lazyplugins.sourcemaps.init({loadMaps: true}))
             .pipe(lazyplugins.typescriptcompiler({
-              allowJs: true
+              allowJs: true,
+              target: "ES6"
             }))
-            .pipe(lazyplugins.uglify({
-                mangle: {toplevel: true},
-                output: {
-                  beautify: false
+            .pipe(lazyplugins.uglify())
+              .pipe(lazyplugins.concat('bundle.min.js'))
+              .pipe(lazyplugins.uglify({
+                mangle: {
+                  toplevel: true,
                 }
               }))
-              .pipe(lazyplugins.concat('bundle.min.js'))
             // .pipe(lazyplugins.sourcemaps.write('/'))
             .pipe(gulp.dest('./dist/assets/scripts'))
     });
@@ -89,7 +88,7 @@ gulp.task('clean', function() {
       .pipe(lazyplugins.clean());
   });
 // Static Server + watching scss/html files
-gulp.task('serve', gulp.series(/*'clean',*/'html','styles','images','tscompile','vendorCss', 'vendorScripts','browser-sync'));
+gulp.task('serve', gulp.series('clean','html','styles','images','tscompile','vendorCss', 'vendorScripts','browser-sync'));
 
 
 gulp.task('default', gulp.parallel('serve'));

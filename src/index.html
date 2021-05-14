@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<html lang="pl">
 
 <head>
   <meta charset="utf-8">
@@ -12,7 +12,6 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="preconnect" href="https://getuikit.com">
   <link rel="preload" href="./assets/style/normalize.css" as="style">
   <link rel="stylesheet" href="./assets/style/normalize.css" as="style">
 
@@ -48,19 +47,18 @@
           </nav>
     
         </header>
+ 
   <section class="uk-container uk-container-expand topsection" uk-parallax="y: 120">
-    
 
-    <div class="logo-box uk-width-2-3 uk-width-2-3@s uk-width-1-3@m" >
-      <a href="#"><img data-src="https://www.freepnglogos.com/uploads/simple-batman-logo-png-5.png" alt="FIXIT" uk-img></a>
+
+    <div class="logo-box uk-width-2-3 uk-width-2-3@s uk-width-1-3@m">
+      <a href="#"><img src="./assets/images/logo.png" alt="FIXIT"></a>
       <div class="logo-description uk-width-2-3 uk-width-1-2@s uk-width-2-3@m uk-width-1-3@xl">Easy isolatie</div>
     </div>
     <div class="content uk-width-1-1">
       <div class="left-person uk-width-1-3">
-        <img class="construction-worker"
-          data-src="https://purepng.com/public/uploads/large/purepng.com-industrail-workerindustrail-workersengineersmale-workerworkers-from-industrymalebuilder-14215269026200oko2.png"
-          alt="" uk-img>
-        </div>
+        <img class="construction-worker" src="./assets/images/worker.png" alt="">
+      </div>
       <div class="header-description uk-align-center">
         <div class="long-desc uk-align-center">
           <h2
@@ -77,17 +75,17 @@
 
 
       </div>
-      
-        </div>
-    </section>
-    <section class="uk-width-1-1 first-infobar">
-      de zomer is koel en de winter is warm
+
+    </div>
+  </section>
+  <section class="uk-width-1-1 first-infobar">
+    de zomer is koel en de winter is warm
   </section>
 
-  <section class="uk-width-1-1 uk-container uk-container-expand waarom-section">
+  <section  id="about" class="uk-width-1-1 uk-container uk-container-expand waarom-section">
     <div class="uk-width-1-1 uk-width-1-2@s uk-width-1-3@m uk-text-center"><img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.jpg" alt="">
-        <button class="info-btn second-bg-color">Geinteresseerd?</button></div>
+        src="./assets/images/mountain2.jpg" alt="">
+      <button class="info-btn second-bg-color">Geinteresseerd?</button></div>
     <div class="uk-width-1-1 uk-width-1-2@m">
       <h2 class="uk-text-center uk-text-bolder uk-width-2-3@l uk-align-center">waarom kiezen voor cellulose isolatie
       </h2>
@@ -99,10 +97,10 @@
         Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
         PageMaker including versions of Lorem Ipsum.</p>
     </div>
-   
+
   </section>
   <section class="uk-width-1-1 uk-container coninf">
-    
+
     <div class="uk-width-1-1 uk-width-1-2@m">
       <h3 class="uk-text-center uk-text-bolder uk-align-center uk-margin-remove-bottom">Ons bedrijf regelt alles voor u.
       </h3>
@@ -110,15 +108,29 @@
       <div class="buttonBx uk-width-1-2@m uk-align-center">
         <button class="uk-width-1-2@l uk-width-1-1 default-btn uk-text-center">Lees meer</button>
         <button class="uk-width-1-2@l uk-width-1-1 default-btn uk-text-center ">Contact Ons</button>
-  </div>
+      </div>
     </div>
-    <div class="uk-width-1-2@m uk-text-center imgBx"><img
-        data-src="https://www.safetyandhealthmagazine.com/ext/resources/images/2016/04-april/construction-safety.jpg" alt="" uk-img>
+    <div class="uk-width-1-2@m uk-text-center imgBx "><img class="lozad"
+        data-src="https://www.safetyandhealthmagazine.com/ext/resources/images/2016/04-april/construction-safety.jpg"
+        alt="">
   </section>
-  
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
   <script type="text/javascript" src="./assets/scripts/uikit.min.js"></script>
   <script type="text/javascript" src="./assets/scripts/uikit-icons.min.js"></script>
-  <!--<script type="text/javascript" src="./assets/scripts/bundle.min.js"></script>-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+    integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"
+    integrity="sha512-Q+G390ZU2qKo+e4q+kVcJknwfGjKJOdyu5mVMcR95NqL6XaF4lY4nsSvIVB3NDP54ACsS9rqhE1DVqgpApl//Q=="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./assets/scripts/bundle.min.js"></script>
+  <script type="text/javascript">
+    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    observer.observe();
+  </script>
 </body>
 
 </html>
