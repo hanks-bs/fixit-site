@@ -17,6 +17,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-dart-sass": "^1.0.2",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-load-plugins": "^2.0.6",
     "gulp-notify": "^4.0.0",

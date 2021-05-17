@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 - Added shortcuts to telephone number buttons
 - Toggle class on scroll in navbar
 - Click on nav item carries to the appropriate section
+- Html minification
 
 ### - Changed:
 - Impoved responsiveness

@@ -7,6 +7,7 @@ lazyplugins.sass = require('gulp-dart-sass');
 lazyplugins.autoprefixer = require('gulp-autoprefixer');
 lazyplugins.cleanCss = require('gulp-clean-css');
 lazyplugins.uglify = require('gulp-uglify-es').default;
+lazyplugins.minifyhtml = require('gulp-htmlmin');
 lazyplugins.typescriptcompiler = require('gulp-typescript');
 lazyplugins.sourcemaps = require('gulp-sourcemaps');
 lazyplugins.imagemin = require('gulp-imagemin');
@@ -64,6 +65,7 @@ gulp.task('images', () => {
 gulp.task( 'html', () => {
 	return gulp
 		.src( './src/*.html' )
+    .pipe(lazyplugins.minifyhtml({ collapseWhitespace: true, removeComments: true, removeEmptyAttributes: true, removeTagWhitespace: true}))
 		.pipe( gulp.dest( './dist' ) )
 } );
 gulp.task('browser-sync', () => {
