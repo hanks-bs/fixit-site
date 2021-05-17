@@ -43,8 +43,10 @@ section
     border: 0;
         padding: 5px;
         font-weight: 550;
-        letter-spacing: 0.5px;
         font-size: 1.5em;
+        @media screen and (max-width: 844px) {
+            font-size: 1.3em;
+        }
         text-transform: uppercase;
         cursor: pointer;
 

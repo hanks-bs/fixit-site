@@ -3,15 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+## [0.1.1] - 17-05.2021
+### - Added:
+- Added shortcuts to telephone number buttons
+- Toggle class on scroll in navbar
+- Click on nav item carries to the appropriate section
 
+### - Changed:
+- Impoved responsiveness
+- Image paths
+- Image heading
 ## [0.1.0] - 17-05.2021
 ### - Added:
 - Next 3 sections
 - Navigation
 - Animations to toggle nawigation
 
-### - Changed:
-- 
 ## [0.0.3] - 14-05.2021
 ### - Added:
 - Animations

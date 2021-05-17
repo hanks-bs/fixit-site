@@ -11,7 +11,8 @@ $bounce: cubic-bezier(.87, -.50, .19, 1.50);
 
 .menu {
   position: fixed;
-  right: 30px;
+  right: 0;
+  transform: translateX(-30px);
   top: 33px;
   height: $menu-height;
   width: $menu-width;

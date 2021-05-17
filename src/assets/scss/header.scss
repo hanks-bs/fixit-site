@@ -13,7 +13,7 @@ nav {
     z-index: 1;
     overflow: hidden;
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 1075px) {
         height: 100vh;
 
     }
@@ -22,7 +22,7 @@ nav {
 
     ul.nav__container {
 
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: 1075px) {
             justify-content: center;
             display: grid;
 

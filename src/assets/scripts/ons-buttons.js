@@ -1,6 +1,6 @@
 const buttonsOnsAnimations = () => {
     let onsSection = document.querySelector(".coninf");
-    let buttons = onsSection.querySelectorAll(".buttonBx > button");
+    let buttons = onsSection.querySelectorAll(".buttonBx > a");
 
     let image = onsSection.querySelector("img");
     image.style.opacity = 0;

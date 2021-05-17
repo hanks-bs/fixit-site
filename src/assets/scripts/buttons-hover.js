@@ -1,5 +1,5 @@
 let button_hoverEffect = () => {
-    let buttons = document.querySelectorAll(".buttonBx button")
+    let buttons = document.querySelectorAll(".buttonBx a")
 
     buttons.forEach(button => {
         button.addEventListener("mouseover", () => {
