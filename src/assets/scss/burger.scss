@@ -7,10 +7,12 @@ $width: 31px;
 $line-size: 6px;
 $line-color: $default-orange-color;
 $to-translate: ($height - $line-size) / 2;
-$bounce: cubic-bezier(.87,-.50,.19,1.50);
+$bounce: cubic-bezier(.87, -.50, .19, 1.50);
 
 .menu {
-  position: relative;
+  position: fixed;
+  right: 30px;
+  top: 33px;
   height: $menu-height;
   width: $menu-width;
   background-color: #FFF;
@@ -18,7 +20,8 @@ $bounce: cubic-bezier(.87,-.50,.19,1.50);
   overflow: hidden;
   border: 2px solid $line-color;
   z-index: 3;
-  
+ 
+
   &__icon {
     position: absolute;
     width: $width;
@@ -27,6 +30,7 @@ $bounce: cubic-bezier(.87,-.50,.19,1.50);
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
   &__line {
     position: absolute;
     left: 0;
@@ -34,27 +38,31 @@ $bounce: cubic-bezier(.87,-.50,.19,1.50);
     height: $line-size;
     width: 100%;
     pointer-events: none;
+
     &--1 {
       top: 0;
     }
+
     &--2 {
       top: 0;
       bottom: 0;
       margin: auto;
     }
+
     &--3 {
       bottom: 0;
     }
   }
-  
-  
-  
+
+
+
   /*--- Close Button 2 ---*/
-  
+
   &--close2 &__line--1 {
-    transition: transform .3s ease-in-out, 
+    transition: transform .3s ease-in-out,
       top .2s ease-in-out .3s;
   }
+
   &--close2 &__line--1:before {
     content: '';
     position: absolute;
@@ -63,34 +71,40 @@ $bounce: cubic-bezier(.87,-.50,.19,1.50);
     background-color: $line-color;
     transition: transform .1s ease-in-out .2s;
   }
+
   &--close2 &__line--2 {
     transition: opacity .0s ease-in-out .3s;
   }
+
   &--close2 &__line--3 {
-    transition: opacity .0s ease-in-out .3s, 
+    transition: opacity .0s ease-in-out .3s,
       bottom .2s ease-in-out .3s;
   }
+
   // Open
   &--close2.open &__line--1 {
     top: $to-translate;
     transform: rotate(135deg);
-    transition: top .3s ease-in-out, 
+    transition: top .3s ease-in-out,
       transform .3s linear .3s;
   }
+
   &--close2.open &__line--1:before {
     transform: rotate(90deg);
     transition: transform .1s ease-in-out .3s;
   }
+
   &--close2.open &__line--2 {
     opacity: 0;
     transition: opacity .0s ease-in-out .3s;
   }
+
   &--close2.open &__line--3 {
     bottom: $to-translate;
     opacity: 0;
-    transition: bottom .3s ease-in-out, 
+    transition: bottom .3s ease-in-out,
       opacity .0s ease-in-out .3s;
   }
-  
-  
+
+
 }

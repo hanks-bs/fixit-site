@@ -8,39 +8,46 @@ let infoSectionAnimation = () => {
     elem.querySelector("div > p").style.opacity = 0;
     elem.querySelector("div > p").style.height = 0;
 
-    let tl1 = gsap.timeline();
-    tl1.add(() => {
-        ScrollTrigger.create({
-            trigger: elem,
-            start: 'top 70%',
-            end: "bottom top",
-            once: true,
-            onEnter: () => {
-                tlin = gsap.timeline()
-                    .fromTo(elem.querySelector("div > img"), 1, {
-                        y: "-300px"
-                    }, {
-                        y: 0,
-                        opacity: 1
-                    })
-                    .fromTo(elem.parentNode.querySelector("button"), {
+    let show_el = () => {
+        let tlin = gsap.timeline()
+        .fromTo(elem.querySelector("div > img"), 1, {
+            y: "-300px"
+        }, {
+            y: 0,
+            opacity: 1,
+        }, )
+        .fromTo(elem.parentNode.querySelector("button"), {
 
-                        y: 40
-                    }, {
-                        opacity: 1,
-                        y: "-55px",
-                        duration: .7
-                    }, "-=.5")
-                    .to([elem.querySelector("div > h2"), elem.querySelector("div > p")], {
-                        height: "auto",
-                        opacity: 1,
-                        duration: .7
-                    }, "-=.5")
+            y: 40
+        }, {
+            opacity: 1,
+            y: "-55px",
+            duration: .7,
+        }, "-=.5")
+        .to([elem.querySelector("div > h2"), elem.querySelector("div > p")], {
+            height: "auto",
+            opacity: 1,
+            duration: .7,
+            ease: "power1"
 
+        }, "-=.5")
 
+    };
+    
+    const sectionObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                show_el();
+                sectionObserver.disconnect();
             }
-        })
-    })
+
+        });
+    }, {
+        rootMargin: "-10% 0% -10% 0%",
+        threshold: [0, 1]
+    });
+    sectionObserver.observe(elem)
 
 
 

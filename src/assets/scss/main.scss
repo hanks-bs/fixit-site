@@ -1,5 +1,8 @@
 @import "__variables";
 
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+
+
 *,
 ::after,
 ::before {
@@ -9,6 +12,30 @@
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: 'Rajdhani', sans-serif;
+    color: #000;
+}
+
+.uk-h1,
+.uk-h2,
+.uk-h3,
+.uk-h4,
+.uk-h5,
+.uk-h6,
+.uk-heading-2xlarge,
+.uk-heading-large,
+.uk-heading-medium,
+.uk-heading-small,
+.uk-heading-xlarge,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000;
+}
 
 section:not(.topsection) {
     align-items: center;
@@ -22,13 +49,13 @@ section:not(.topsection) {
     &.first-infobar {
         color: #fff;
         font-weight: 800;
-        font-size: $h1-font-size;
+        font-size: 2.5em;
         display: flex;
         text-align: center;
         justify-content: center;
 
         @media only screen and (max-width: 844px) {
-            font-size: $h1-font-size-phone;
+            font-size: 1.5em;
 
         }
 
@@ -40,7 +67,16 @@ section:not(.topsection) {
 
     &.waarom-section {
         overflow: hidden;
+        background: rgb(222, 222, 222);
+        background: linear-gradient(0deg, rgba(222, 222, 222, 1) 0%, rgba(237, 237, 237, 1) 2%, rgba(253, 253, 253, 1) 32%, rgba(255, 255, 255, 1) 100%);
+        border-bottom: 1px solid #bdbcbd;
+        border-top: 1px solid #bdbcbd;
 
+        .description {
+            color: #000;
+            font-weight: 500;
+            font-size: 1.3em;
+        }
 
         &>div>img {
             max-height: 350px;
@@ -82,9 +118,324 @@ section:not(.topsection) {
         .imgBx {
             padding-left: 15px;
             padding-right: 15px;
+
+            &>img {
+                max-height: 245px;
+            }
         }
 
     }
+
+    &.section__B {
+        background-color: #16806b;
+
+        h1 {
+            font-size: 1.6em;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+
+        }
+
+        p {
+            color: #fff;
+            text-align: center;
+            font-size: 1.3em;
+
+
+        }
+
+        ul {
+            text-align: center;
+            list-style: none;
+            font-size: 1.3em;
+
+        }
+
+        ul>li {
+            color: #fff;
+
+            &:before {
+                content: "-";
+            }
+        }
+
+        .heading {
+            background: #fff;
+            font-weight: 550;
+            letter-spacing: 0.5px;
+            color: #16806b;
+            padding: 15px;
+
+            @media only screen and (max-width:844px) {
+
+                font-size: 2em
+            }
+
+            text-align: center;
+            font-size: 2.5em;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .heading:last-of-type {
+
+            margin-bottom: 5%;
+        }
+
+        .subsection {
+            background-color: #fff;
+            padding: 30px 45px;
+            padding-bottom: 45px;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 60px;
+
+
+
+
+
+            @media only screen and (min-width:576px) {
+
+                &.__last {
+                    .image__container {
+                        &>.container__elem {
+                            &:first-child {
+                                margin-left: 19%;
+                            }
+
+                            &:last-child {
+                                margin-right: 19%;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .image__container {
+            @media only screen and (min-width:576px) {
+
+                display: flex;
+            }
+
+
+
+            position: relative;
+            justify-content: space-between;
+
+            &>.container__elem {
+
+                position: relative;
+
+                @media only screen and (min-width:576px) {
+
+                    width: 25%;
+
+                }
+
+                &:not(:last-child) {
+                    @media only screen and (max-width:576px) {
+
+
+                        margin-bottom: 35%;
+
+                    }
+                }
+
+
+
+                &:not(:last-child)::after {
+                    content: '';
+                    background-image: url("../images/arrow.png");
+                    height: 100%;
+                    width: 20%;
+                    position: absolute;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    right: -35%;
+
+                    @media only screen and (max-width:576px) {
+                        bottom: 0;
+                        height: 25%;
+                        right: 40%;
+                        width: 10%;
+                        transform: translateY(122%) rotate(90deg);
+                    }
+                }
+            }
+        }
+    }
+
+    &.section__C {
+        margin-bottom: 35px;
+
+        h1 {
+            font-size: 1.6em;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+
+        }
+
+        .heading {
+            background: #16806b;
+            font-weight: 550;
+            letter-spacing: 0.5px;
+            color: #fff;
+            padding: 15px;
+            @media only screen and (min-width:1200px) {
+
+                width: 44%;
+            }
+
+
+            @media only screen and (max-width:844px) {
+
+                font-size: 2em
+            }
+
+            text-align: center;
+            font-size: 2.5em;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .heading:last-of-type {
+
+            margin-bottom: 5%;
+        }
+
+        .subsection:not(:last-child) {
+            background-color: #fff;
+            padding: 30px 45px;
+            padding-bottom: 45px;
+            text-align: center;
+            margin: 0 auto;
+
+
+        }
+
+        .section__desc {
+            text-align: justify;
+            color: #000;
+            font-weight: 500;
+            font-size: 1.3em;
+            margin: 0 auto;
+            margin-top: 0px;
+            margin-top: -35px;
+            word-break: keep-all;
+        }
+
+        .image__container {
+            margin-bottom: 35px;
+            display: block;
+
+            @media only screen and (min-width:576px) {
+
+                display: flex;
+            }
+
+
+
+            position: relative;
+            justify-content: space-between;
+
+            &>.container__elem {
+                &:first-child {
+                    margin-left: 0%;
+                }
+
+                &:last-child {
+                    margin-right: 0%;
+                }
+            }
+
+            &>.container__elem {
+                background-color: #16806b;
+                position: relative;
+
+                @media only screen and (min-width:576px) {
+
+                    width: 28%;
+
+                }
+
+                @media only screen and (max-width:576px) {
+
+                    margin: 35px auto !important;
+                }
+
+                &:not(:last-child) {
+                    @media only screen and (max-width:576px) {
+
+
+                        margin-bottom: 35%;
+
+
+                    }
+                }
+
+                &>.h__r {
+                    padding: 6% 2% 6% 2%;
+
+                    &>img {
+                        padding: 10px 25% 0px 25%
+                    }
+
+                    h3 {
+                        font-weight: 550;
+                        margin-top: 20px;
+                    }
+
+                }
+            }
+        }
+
+
+    }
+    &.phone__section
+    {
+        color: #fff;
+font-weight: 800;
+font-size: 2.5em;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+text-align: center;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+text-transform: uppercase;
+min-height: 120px;
+background-color: $default-orange-color;
+margin: 0 auto;
+
+& > img 
+{
+    max-height: 50px;
+    margin-right: 15px;
+}
+
+
+@media only screen and (max-width:844px) {
+    font-size: 2em;
+   
+    
+    
+    & > img
+ {
+    max-height: 45px;
+   
+ }
+}
+
+
+
+    }
+
 }
 
 section {
@@ -111,21 +462,23 @@ section {
             }
         }
 
-        
+
         button:first-child {
             margin-right: 15px;
         }
+
         @media screen and (max-width: 372px) {
 
             button:first-child {
                 margin-right: 0;
             }
-            & > button:first-child
-            {
+
+            &>button:first-child {
                 margin-bottom: 10px;
             }
         }
     }
+
     p {
         &.under-hd {
             margin-top: 0;

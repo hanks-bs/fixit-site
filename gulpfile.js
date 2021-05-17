@@ -18,14 +18,10 @@ lazyplugins.concat = require('gulp-concat');
     gulp.task( 'styles',  () => {
         return gulp
             .src('./src/assets/scss/*.scss' )
-
-            //.pipe(lazyplugins.sourcemaps.init({loadMaps: true}))
             .pipe( lazyplugins.sass().on( 'error', lazyplugins.sass.logError ))
             .pipe( lazyplugins.autoprefixer( 'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4' ) )
             .pipe(lazyplugins.concat('bundle.min.css'))
-            //.pipe( lazyplugins.cleanCss()) //REMOVE WHEN DISTRIBUTION
-            //.pipe(lazyplugins.sourcemaps.write('/'))
-            .pipe( lazyplugins.cleanCss())  //REMOVE COMMENT TO DISTRIBUTION!
+            .pipe( lazyplugins.cleanCss()) 
             .pipe( gulp.dest( './dist/assets/style' ) )
             .pipe( browserSync.reload( {stream: true} ) );
     } ); 
@@ -37,7 +33,7 @@ lazyplugins.concat = require('gulp-concat');
     gulp.task('tscompile', () =>
     {
         return gulp.src(['./src/assets/scripts/*.ts', './src/assets/scripts/*.js'])
-        //.pipe(lazyplugins.sourcemaps.init({loadMaps: true}))
+     
             .pipe(lazyplugins.typescriptcompiler({
               allowJs: true,
               target: "ES6"
@@ -49,7 +45,7 @@ lazyplugins.concat = require('gulp-concat');
                   toplevel: true,
                 }
               }))
-            // .pipe(lazyplugins.sourcemaps.write('/'))
+           
             .pipe(gulp.dest('./dist/assets/scripts'))
     });
     gulp.task('vendorCss', () => {
@@ -88,7 +84,7 @@ gulp.task('clean', function() {
       .pipe(lazyplugins.clean());
   });
 // Static Server + watching scss/html files
-gulp.task('serve', gulp.series('clean','html','styles','images','tscompile','vendorCss', 'vendorScripts','browser-sync'));
+gulp.task('serve', gulp.series(/*'clean',*/'html','styles','images','tscompile','vendorCss', 'vendorScripts','browser-sync'));
 
 
 gulp.task('default', gulp.parallel('serve'));
