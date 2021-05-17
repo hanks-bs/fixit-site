@@ -2,7 +2,6 @@ const animateNav = () => {
 let menuButton = document.querySelector(".menu.menu--close2");
 let menuContainer = document.querySelector("nav");
 let menuItems = menuContainer.querySelectorAll("li");
-let links = menuContainer.querySelectorAll("li > a");
 
 const hideNav = () => {
     let tl = gsap.timeline();
@@ -50,8 +49,12 @@ menuButton.addEventListener("click", () => {
             })
     }
 
-    links.forEach(element => {
-        element.addEventListener("click", () => {
+    menuItems.forEach(element => {
+        element.querySelector("a").addEventListener("click", () => {
+            let active = document.querySelector(".nav__item.active")
+            active.classList.remove("active");
+
+            element.classList.add("active");
         hideNav();
         })
       });
