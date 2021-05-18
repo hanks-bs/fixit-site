@@ -10,7 +10,7 @@ nav {
     display: flex;
     height: 100px;
     clip-path: circle(0 at 100% 0);
-    z-index: 1;
+    z-index: 2;
     overflow: hidden;
 
     @media screen and (max-width: 1075px) {
@@ -76,8 +76,6 @@ section.topsection {
     background-size: cover;
     background-position: center center;
     background-color: #ececec;
-    z-index: -1;
-    position: relative;
 
 
 
@@ -221,19 +219,31 @@ section.topsection {
                     padding: 5px 30px;
                 }
 
-                &.short-desc {
-                    font-size: $description-font-size;
+                
+            }
 
+            a
+            {
+                color: #fff;
+                &:hover
+                {
+                    text-decoration: none;
+                }
+
+                .short-desc {
+                    font-size: $description-font-size;
+    
                     @media only screen and (max-width: 1000px) {
                         font-size: $description-font-size-phone;
                     }
-
+    
                     text-transform: uppercase;
                     font-weight: 800;
                     padding: 15px;
                     background-color: #16806b;
                 }
             }
+             
 
             font-size: 2em;
         }

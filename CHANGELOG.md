@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+## [1.0.0] - 18-05.2021
+### - Added:
+- Rest of the sections
+- Rest animations to sections
+- Contact form
 ## [0.1.1] - 17-05.2021
 ### - Added:
 - Added shortcuts to telephone number buttons

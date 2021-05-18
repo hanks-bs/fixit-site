@@ -54,6 +54,8 @@ section:not(.topsection) {
         display: flex;
         text-align: center;
         justify-content: center;
+        z-index: 1;
+        position: relative;
 
         @media only screen and (max-width: 844px) {
             font-size: 1.5em;
@@ -398,7 +400,8 @@ section:not(.topsection) {
                 }
 
                 &>.h__r {
-                    padding: 6% 2% 6% 2%;
+                    padding: 2% 2% 2% 2%;
+                    min-height: 220px;
 
                     &>img {
                         padding: 10px 25% 0px 25%
@@ -406,7 +409,7 @@ section:not(.topsection) {
 
                     h3 {
                         font-weight: 550;
-                        margin-top: 20px;
+                        margin-top: 15px;
 
                         @media screen and (max-width: 844px) {
                             font-size: 1.3em;
@@ -455,14 +458,73 @@ section:not(.topsection) {
         min-height: 120px;
         background-color: $default-orange-color;
         margin: 0 auto;
+    }
+
+    &.contact__section {
+
+        .subsection
+        {
+            background-color: #fff;
+            padding: 30px 15px;
+
+            h2 
+            {
+                color: $default-orange-color;
+            }
+            p
+            {
+                text-align: center;
+                font-weight: 550;
+            }
 
 
+            .form__container > form
+            {
 
+                .form__inputContainer
+                {
+                    #form-message 
+                    {
+                        resize:both;
+                        min-height: 175px;
+                        padding: 10px;
+                    }
+                    margin-bottom: 15px;
+                    label
+                    {
+                       
+                        color: #000;
+                        font-size: 1.05em;
+                        font-weight: 800;
+                    }
 
+                    .uk-form-controls
+                    {
+                        margin-top: 5px;
+                    }
 
+                    input, textarea
+                    {
+                        background: rgb(222, 222, 222);
+                        background: linear-gradient(0deg, rgba(222, 222, 222, 1) 0%, rgba(237, 237, 237, 1) 2%, rgba(253, 253, 253, 1) 32%, rgba(255, 255, 255, 1) 100%);
+                        border: 1px solid #bdbcbd66;
+                        color: #000;
+                    }
+                }
 
-
-
+                .default-btn
+                {
+                    background: #bb5616;
+                    color: #fff;
+                    padding: 10px;
+                    &:hover
+                    {
+                        background: #fff;
+                    color: #bb5616;
+                    }
+                }
+            }
+        }
     }
 
 }

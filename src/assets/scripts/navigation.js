@@ -73,11 +73,9 @@ const animateNav = () => {
         let setActive = () => {
             let active = document.querySelector(".nav__item.active")
             active.classList.remove("active");
-            console.log(section.getAttribute("id"));
             navItem.parentNode.classList.add("active")
         }
         let navItem = document.querySelector(`li.nav__item > a[href='#${section.getAttribute('id')}'`);
-        console.log(section.getAttribute("id"));
         ScrollTrigger.create({
             trigger: "#" + section.getAttribute("id"),
             once: false,

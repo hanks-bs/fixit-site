@@ -62,6 +62,17 @@ gulp.task('images', () => {
       .pipe(gulp.dest('./dist/assets/images'))
       .pipe(lazyplugins.notify({ message: 'Images task complete' }));
   });
+
+  gulp.task( 'vendorPhp', () => {
+    return gulp
+      .src( './src/assets/php/*.php' )
+      .pipe( gulp.dest( './dist/assets/php' ) )
+  } );
+  gulp.task( 'Vendorhtaccess', () => {
+    return gulp
+      .src( './src/.htaccess' )
+      .pipe( gulp.dest( './dist' ) )
+  } );
 gulp.task( 'html', () => {
 	return gulp
 		.src( './src/*.html' )
@@ -81,12 +92,12 @@ gulp.task('browser-sync', () => {
     gulp.watch("./src/*.html").on('change', browserSync.reload);
   });
   // Clean
-gulp.task('clean', function() {
+gulp.task('clean', () => {
     return gulp.src('./dist', {read: false})
       .pipe(lazyplugins.clean());
   });
 // Static Server + watching scss/html files
-gulp.task('serve', gulp.series(/*'clean',*/'html','styles','images','tscompile','vendorCss', 'vendorScripts','browser-sync'));
+gulp.task('serve', gulp.series(/*'clean',*/'html','styles','images','tscompile','vendorCss', 'vendorScripts', 'vendorPhp', 'Vendorhtaccess','browser-sync'));
 
 
 gulp.task('default', gulp.parallel('serve'));
